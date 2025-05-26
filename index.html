@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="IEG">
+  <meta name="keywords" content="IEG">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HG-SCRUB</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.ico">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="./static/js/index_2.js"></script>
+  
+  <style>
+    .section-divider {
+      width: 100%;
+      margin: 20px auto;
+      height: 2px;
+      background-color: #e0e0e0;
+      border: none;
+    }
+    
+    /* Adding better list styling */
+    ul.custom-list {
+      list-style-type: disc;
+      margin-left: 1.5em;
+      margin-bottom: 1em;
+    }
+    
+    ul.custom-list li {
+      margin-bottom: 0.5em;
+    }
+    
+    /* Add some spacing between sections */
+    section.section {
+      padding: 2rem 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HG-SCRUB : Human Gaussian Single Camera Relighting with Unified Blending</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="">Junsuk (John) Kim</a><sup>1</sup>,</span>
+              <a href="">Neil Gautam</a><sup>1</sup>,</span>
+
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Texas A&M University - College Station</span>
+          </div>
+
+          <div class="column has-text-centered">
+          
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Problem summary</h2>
+        <div class="content has-text-justified">
+          <p>
+            The task addressed in this project is the realistic relighting and blending of human avatars captured from monocular video into novel target scenes. While recent advances in 3D Gaussian Splatting (3DGS) and NeRF have enabled high-fidelity visual reconstructions, these methods often fall short in producing physically consistent integration—especially under novel lighting conditions or when ensuring contact realism between avatars and scene surfaces. Most prior systems depend on multi-camera setups or lack unified handling of both relighting and blending. Thus, the goal is to develop a pipeline that achieves both relighting and seamless integration using only monocular input, lowering the barrier to entry for avatar-based AR/VR and content generation.
+          </p>
+                </div>
+      </div>
+    </div>
+    
+
+   
+
+
+
+      <section class="section">
+        <div class="container is-max-desktop">
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <hr class="section-divider">
+              <h2 class="title is-4">Demo Results</h2>
+              <div class="content has-text-justified">
+                <p>The following animations show our human Gaussian models relit and placed in different scenes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <div class="container">
+        <div id="main-results-carousel" class="carousel" data-autoplay="true" data-infinite="true" data-loop="true">
+          <!-- Carousel Items -->
+          <div class="carousel-item">
+            <video autoplay loop muted playsinline loading="lazy" width="100%">
+            <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/dragon_bed.gif.webm" alt="Human Gaussian in bedroom scene"  type="video/webm">
+            </video>
+          </div>
+          <div class="carousel-item">
+             <video autoplay loop muted playsinline loading="lazy" width="100%">
+            <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/dragon_lab_relight.gif.webm" alt="Human Gaussian in lab scene with relighting"   type="video/webm">
+                           </video>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            bulmaCarousel.attach('#main-results-carousel', {
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              loop: true,
+              autoplay: true,
+              autoplaySpeed: 3000,
+            });
+          });
+        </script>
+      </div>
+
+
+
+        <section class="section">
+            <div class="container is-max-desktop">
+    
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <hr class="section-divider">
+                  <h2 class="title is-4">Previous Work</h2>
+                  <div class="content has-text-justified">
+                    <ul class="custom-list">
+                      <li><strong>HUGS:</strong> Demonstrated the use of basic 3DGS for human reconstruction but lacked scene-aware relighting and alignment. Floating artifacts are prominent in the representation.</li>
+                      <li><strong>The Relightables:</strong> Requires high-quality multi-camera setup for learning human representation and then relighting, not scalable to general users.</li>
+                      <li><strong>PhysAvatar:</strong> Modeled physically plausible interactions but depended on detailed observations, uses a physics based simulator for the training. Also required extensive multi-camera setup based dataset.</li>
+                      <li><strong>GS-IR:</strong> Provided a foundation for inverse rendering using 3D Gaussians (normals, albedo, roughness).</li>
+                      <li><strong>DiffusionLight:</strong> Enabled generation of environment maps via chrome ball images.</li>
+                      <li><strong>BiGS:</strong> Addressed relightable Gaussian primitives.</li>
+                      <li><strong>SuGaR:</strong> Focused on aligning Gaussian geometry to mesh surfaces—an inspiration for improving avatar placement. This will work as the foundation work for achieving our extended goal of achieving human blending in the scene.</li>
+
+                      <p><li>Even though there are previous work that learns promising results in avatar creation for the human using NeRF, 3D Gaussian Splatting based representation, no other work focused on achieving relighting of the human avatar based on novel scene's lighting in a single camera monocular video setting. Our work address this niche problem of human avatar relighting and blending.</li>
+                      </p>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Abstract. -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <hr class="section-divider">
+              <h2 class="title is-4">HUGS: Human Gaussians</h2>
+              <div class="content has-text-justified">
+                <p>HUGS demonstrates a state-of-the-art approach for human reconstruction using 3D Gaussian Splatting, which serves as a foundation for our work.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="container">
+        <div id="hugs-carousel" class="carousel" data-autoplay="true" data-infinite="true" data-loop="true">
+          <!-- Carousel Items -->
+          <div class="carousel-item">
+            <video autoplay loop muted playsinline loading="lazy" width="100%">
+            <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/hugs.gif.webm" alt="HUGS demo"  type="video/webm">
+            </video>
+          </div>
+          <div class="carousel-item">
+            <video autoplay loop muted playsinline loading="lazy" width="100%">
+            <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/hugs_person_1.gif.webm" alt="HUGS person example" type="video/webm">
+            </video>
+          </div>
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            bulmaCarousel.attach('#hugs-carousel', {
+              slidesToScroll: 1,
+              slidesToShow: 1,
+              loop: true,
+              autoplay: true,
+              autoplaySpeed: 3000,
+            });
+          });
+        </script>
+      </div>
+
+   
+        <section class="section">
+            <div class="container is-max-desktop">
+              <!-- Abstract. -->
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <hr class="section-divider">
+                  <h2 class="title is-4">Relightables</h2>
+                  <div class="content has-text-justified">
+                    <p>The Relightables project showed impressive relighting results but required a complex multi-camera capture setup, highlighting the need for our single-camera approach.</p>
+                       <img src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/relightables.png" alt="HUGS person example"  loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+
+          <section class="section">
+            <div class="container is-max-desktop">
+              <!-- Abstract. -->
+              <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                  <hr class="section-divider">
+                  <h2 class="title is-4">NVIDIA-PBR</h2>
+                  <div class="content has-text-justified">
+                    <p>NVIDIA's Physically Based Rendering demonstrates the kind of realistic material and lighting interactions we aim to achieve with our Gaussian-based approach.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <section class="section">
+          <div class="container is-max-desktop">
+            <!-- Abstract. -->
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <hr class="section-divider">
+                <video autoplay loop muted playsinline loading="lazy" width="100%">
+                <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/pbr_nvidia.gif.webm" alt="NVIDIA PBR demo"  type="video/webm">
+                </video>
+                <div class="content has-text-justified">
+                  <p>Our approach draws inspiration from physically-based rendering techniques demonstrated above.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    </div>
+  
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+    </div>
+    <br/>
+    <!--/ Interpolating. --> 
+
+    <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <hr class="section-divider">
+
+
+         <video autoplay loop muted playsinline loading="lazy" width="100%">
+                <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/output_output.mp4.webm" alt="Pipeline"  type="video/webm">
+                </video>
+
+
+              
+              <h2 class="title is-4">Our Methodology</h2>
+              <div class="content has-text-justified">
+                <ul class="custom-list">
+                  <li>Constructed a full pipeline using single camera monocular video and a target scene image.</li>
+                  <li>Reconstructed 3D human Gaussian splats in both canonical and posed space using LBS (Linear Blend Skinning) and introduced explicit normal and depth learning</li>
+                  <!--/ <li>Applied GS-IR and DiffusionLight to extract and learn environment lighting and material maps.</li>-->
+                  <li>Extracted {Normal, Albedo, Roughness, Metallic} from both human and target scenes.</li>
+                  <li>Performed early-stage relighting using both learned environment maps and external chromeball references.</li>
+                  <li>Developed initial routines for unifying the human and scene Gaussians with matched geometry and materials.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <hr class="section-divider">
+              <h2 class="title is-4">Results</h2>
+              <div class="content has-text-justified">
+                <ul class="custom-list">
+                  <li>Achieved decomposition of the human and the scene in separate representation and learnt their material & physical component (Normals, Albedo, Roughness & Metallic).</li>
+                  <li>Successfully performed visual relighting with Diffusion-Light and the GS-IR.</li>
+                  <li>Introduced explicit normal training in the Human Gaussian Splats driven by Depth, inspired by the inverse-rendering concepts.</li>
+                  <li>Achieved relit human Gaussian that re-correct its lightning to match the target scene's lighting.</li>
+                  <li>Preliminary blended renderings show promise but require refinement.</li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <hr class="section-divider">
+              <h2 class="title is-4">Analysis of Work</h2>
+              <div class="content has-text-justified">
+                <h4>New Results</h4>
+                <ul class="custom-list">
+                  <li>Demonstrated a single-camera pipeline for scene-aware avatar relighting and early blending—previously only possible with multi-camera setups.</li>
+                  <li>Integrated GS-IR with 3D Gaussian Splatting for both human and environment representations.</li>
+                  <li>Used Diffusion-based light probes for real-time environment estimation—this cross-method integration is novel.</li>
+                </ul>
+                
+                <h4>Meeting Goals</h4>
+                <ul class="custom-list">
+                  <li>Partially met: Achieved strong relighting as can be seen in the Dragon's Results (using BiGS), but blending of human and scene is still a WIP.</li>
+                  <li>Did not yet fully implement human-scene contact constraints.</li>
+                  <li>Geometry-aware alignment needs improvement to match SMPL surfaces tightly with scene surfaces.</li>
+                  <li>Even after integration GS-IR for human, the normals are not entirely accurate and needs more constraint during training (Distance constraint from the SMPL mesh for removing floating artifacts  that remain in the learnt 3D GS representation for Human).</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <hr class="section-divider">
+            <h2 class="title is-4">Future Work</h2>
+            <div class="content has-text-justified">
+              <h4>Short-term</h4>
+              <ul class="custom-list">
+                <li>Finalize unified blending of the human Gaussian with the scene Gaussian.</li>
+                <li>Improve SMPL-guided contact fidelity to reduce float artifacts.</li>
+                <li>Fine-tune material and lighting extraction with more stable inverse rendering techniques.</li>
+              </ul>
+              
+              <h4>Long-term</h4>
+              <ul class="custom-list">
+                <li>Introduce temporal consistency constraints across video frames.</li>
+                <li>Generalize pipeline to moving backgrounds or outdoor scenes.</li>
+                <li>Explore real-time adaptation using lightweight models for AR applications.</li>
+              </ul>
+
+              <div class="has-text-centered" style="margin-top: 2rem;">
+                <video autoplay loop muted playsinline loading="lazy" width="100%">
+                <source src="https://huggingface.co/datasets/johnkimryno/HG-SCRUB/resolve/main/sugar.gif.webm" alt="SuGaR demonstration" type="video/webm">
+                  </video>
+                <p class="is-size-7" style="margin-top: 1rem;">Example of SuGaR alignment techniques that inspire our future work</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Empty content removed -->
+      </div>
+    </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is based on <a href="https://nerfies.github.io/">Nerfies</a>, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+</html>
